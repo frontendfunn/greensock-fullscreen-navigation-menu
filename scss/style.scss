@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,900&display=swap');
+:root {
+  --font-family: 'Poppins', sans-serif;
+  --black-bg: #313434;
+  --white-bg: #ffffff;
+  --red-bg: #f03a37;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('https://images.unsplash.com/photo-1560372610-931c8343bc43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.top-nav .brand-name {
+  font-size: 50px;
+  color: var(--white-bg);
+}
+
+.top-nav .menu-toggler {
+  display: inline-flex;
+  margin-left: auto;
+  align-items: center;
+  outline: 0;
+  background-color: transparent;
+  border: 1px solid var(--white-bg);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.top-nav .menu-toggler .navbar-icon {
+  height: 30px;
+  width: 30px;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.top-nav .menu-toggler .navbar-icon span {
+  height: 2px;
+  width: 22px;
+  background-color: var(--white-bg);
+  display: flex;
+  position: relative;
+  transition: all ease 0.5s;
+}
+
+.top-nav .menu-toggler .navbar-icon > span:nth-child(2) {
+  margin: 4px auto;
+}
+
+.top-nav .menu-toggler.active .navbar-icon > span:not(:nth-child(2)) {
+  position: absolute;
+}
+
+.top-nav .menu-toggler.active .navbar-icon > span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.top-nav .menu-toggler.active .navbar-icon > span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.top-nav .menu-toggler.active .navbar-icon > span:nth-child(2) {
+  opacity: 0;
+}
+
+/*overlay nav*/
+.navigation-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  font-family: var(--font-family);
+}
+
+.navigation-menu .navigation-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.navigation-menu .navigation-bg.one {
+  width: 4px;
+  background-color: var(--white-bg);
+}
+
+.navigation-menu .navigation-bg.two {
+  width: 0;
+  background-color: var(--red-bg);
+}
+.navigation-menu .navigation-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.navigation-menu .nav-inner {
+  position: relative;
+  text-align: right;
+}
+
+.navigation-menu .nav-inner .nav-link {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--white-bg);
+}
+
+.hero-content {
+  text-align: center;
+  background-color: transparent;
+  color: var(--white-bg);
+}
